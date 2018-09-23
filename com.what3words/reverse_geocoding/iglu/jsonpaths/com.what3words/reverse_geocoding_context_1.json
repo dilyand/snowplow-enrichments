@@ -1,0 +1,28 @@
+{
+    "jsonpaths": [
+        "$.schema.vendor",
+        "$.schema.name",
+        "$.schema.format",
+        "$.schema.version",
+        "$.hierarchy.rootId",
+        "$.hierarchy.rootTstamp",
+        "$.hierarchy.refRoot",
+        "$.hierarchy.refTree",
+        "$.hierarchy.refParent",
+        "$.data.bounds.northeast.lat",
+        "$.data.bounds.northeast.lng",
+        "$.data.bounds.southwest.lat",
+        "$.data.bounds.southwest.lng",
+        "$.data.crs.properties.href",
+        "$.data.crs.properties.type",
+        "$.data.crs.type",
+        "$.data.geometry.lat",
+        "$.data.geometry.lng",
+        "$.data.language",
+        "$.data.map",
+        "$.data.status.code",
+        "$.data.status.message",
+        "$.data.thanks",
+        "$.data.words"
+    ]
+}

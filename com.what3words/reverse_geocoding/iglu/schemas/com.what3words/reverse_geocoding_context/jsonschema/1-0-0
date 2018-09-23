@@ -1,0 +1,102 @@
+{
+  "$schema" : "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+  "self" : {
+    "vendor" : "com.what3words",
+    "name" : "reverse_geocoding_context",
+    "version" : "1-0-0",
+    "format" : "jsonschema"
+  },
+  "type" : "object",
+  "properties" : {
+    "map" : {
+      "type" : "string",
+      "format" : "uri"
+    },
+    "thanks" : {
+      "type" : "string"
+    },
+    "bounds" : {
+      "type" : "object",
+      "properties" : {
+        "southwest" : {
+          "type" : "object",
+          "properties" : {
+            "lng" : {
+              "type" : "number"
+            },
+            "lat" : {
+              "type" : "number"
+            }
+          },
+          "additionalProperties" : false
+        },
+        "northeast" : {
+          "type" : "object",
+          "properties" : {
+            "lng" : {
+              "type" : "number"
+            },
+            "lat" : {
+              "type" : "number"
+            }
+          },
+          "additionalProperties" : false
+        }
+      },
+      "additionalProperties" : false
+    },
+    "language" : {
+      "type" : "string"
+    },
+    "status" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "integer"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "additionalProperties" : false
+    },
+    "words" : {
+      "type" : "string"
+    },
+    "geometry" : {
+      "type" : "object",
+      "properties" : {
+        "lng" : {
+          "type" : "number"
+        },
+        "lat" : {
+          "type" : "number"
+        }
+      },
+      "additionalProperties" : false
+    },
+    "crs" : {
+      "type" : "object",
+      "properties" : {
+        "type" : {
+          "type" : "string"
+        },
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "href" : {
+              "type" : "string",
+              "format" : "uri"
+            },
+            "type" : {
+              "type" : "string"
+            }
+          },
+          "additionalProperties" : false
+        }
+      },
+      "additionalProperties" : false
+    }
+  },
+  "additionalProperties" : false
+}
