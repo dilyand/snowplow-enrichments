@@ -1,0 +1,49 @@
+{
+  "schema": "iglu:com.snowplowanalytics.snowplow.enrichments/api_request_enrichment_config/jsonschema/1-0-0",
+  "data": {
+    "vendor": "com.snowplowanalytics.snowplow.enrichments",
+    "name": "api_request_enrichment_config",
+    "enabled": false,
+    "parameters": {
+      "inputs": [
+        {
+          "key": "lat",
+          "pojo": {
+            "field": "geo_latitude"
+          }
+        },
+        {
+          "key": "lng",
+          "pojo": {
+            "field": "geo_longitude"
+          }
+        }
+      ],
+      "api": {
+        "http": {
+          "method": "GET",
+          "uri": "https://api.what3words.com/v2/reverse?coords={{lat}},{{lng}}&display=full&format=json",
+          "timeout": 2000,
+          "authentication": {
+            "httpBasic": {
+              "username": "{{API_KEY}}",
+              "password": ""
+            }
+          }
+        }
+      },
+      "outputs": [
+        {
+          "schema": "iglu:com.what3words/reverse_geocoding_context/jsonschema/1-0-0" ,
+          "json": {
+            "jsonPath": "$"
+          }
+        }
+      ],
+      "cache": {
+        "size": 3000,
+        "ttl": 60
+      }
+    }
+  }
+}
