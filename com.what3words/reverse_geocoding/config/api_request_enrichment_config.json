@@ -3,7 +3,7 @@
   "data": {
     "vendor": "com.snowplowanalytics.snowplow.enrichments",
     "name": "api_request_enrichment_config",
-    "enabled": false,
+    "enabled": true,
     "parameters": {
       "inputs": [
         {
@@ -22,11 +22,11 @@
       "api": {
         "http": {
           "method": "GET",
-          "uri": "https://api.what3words.com/v2/reverse?coords={{lat}},{{lng}}&display=full&format=json",
+          "uri": "https://api.what3words.com/v2/reverse?coords={{lat}},{{lng}}&display=full&format=json&key=API-KEY",
           "timeout": 2000,
           "authentication": {
             "httpBasic": {
-              "username": "{{API_KEY}}",
+              "username": "",
               "password": ""
             }
           }
