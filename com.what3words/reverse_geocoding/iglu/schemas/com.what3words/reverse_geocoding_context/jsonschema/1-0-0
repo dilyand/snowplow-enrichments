@@ -28,7 +28,7 @@
               "type" : "number"
             }
           },
-          "additionalProperties" : false
+          "additionalProperties" : true
         },
         "northeast" : {
           "type" : "object",
@@ -40,10 +40,10 @@
               "type" : "number"
             }
           },
-          "additionalProperties" : false
+          "additionalProperties" : true
         }
       },
-      "additionalProperties" : false
+      "additionalProperties" : true
     },
     "language" : {
       "type" : "string"
@@ -58,7 +58,7 @@
           "type" : "string"
         }
       },
-      "additionalProperties" : false
+      "additionalProperties" : true
     },
     "words" : {
       "type" : "string"
@@ -73,7 +73,7 @@
           "type" : "number"
         }
       },
-      "additionalProperties" : false
+      "additionalProperties" : true
     },
     "crs" : {
       "type" : "object",
@@ -92,11 +92,11 @@
               "type" : "string"
             }
           },
-          "additionalProperties" : false
+          "additionalProperties" : true
         }
       },
-      "additionalProperties" : false
+      "additionalProperties" : true
     }
   },
-  "additionalProperties" : false
+  "additionalProperties" : true
 }
